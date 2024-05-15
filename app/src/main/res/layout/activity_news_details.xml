@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.details.DetailsActivity">
+
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/white"
+        android:paddingTop="15dp"
+        android:paddingHorizontal="15dp"
+        android:src="@drawable/ic_arrow_left"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/ib_favoritebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/white"
+        android:paddingTop="15dp"
+        android:paddingHorizontal="15dp"
+        android:src="@drawable/ic_favorite_border" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/ib_sharebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ib_favoritebutton"
+        android:backgroundTint="@color/white"
+        android:paddingTop="15dp"
+        android:paddingHorizontal="15dp"
+        android:src="@drawable/ic_share" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_newsimage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/back_button"
+        tools:srcCompat="@tools:sample/backgrounds/scenic"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_newstitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent
+"
+        app:layout_constraintTop_toBottomOf="@id/iv_newsimage" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_newsauthorimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_baseline_newspaper_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_newsauthor"
+        app:layout_constraintTop_toBottomOf="@id/tv_newstitle"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_newsauthor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_newsauthorimage"
+
+        app:layout_constraintEnd_toStartOf="@id/iv_dateimage"
+        app:layout_constraintStart_toEndOf="@id/iv_newsauthorimage"
+        app:layout_constraintTop_toTopOf="@id/iv_newsauthorimage"
+        tools:text="Author Name" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_dateimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_baseline_date_range_24"
+        app:layout_constraintStart_toEndOf="@id/tv_newsauthor"
+        app:layout_constraintTop_toBottomOf="@id/tv_newstitle"
+        app:layout_constraintEnd_toStartOf="@id/tv_date"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_newsauthorimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_dateimage"
+        app:layout_constraintTop_toTopOf="@id/iv_newsauthorimage"
+        tools:text="07.07.2021" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_newscontent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@id/btn_source"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_newsauthorimage" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:fontFamily="@font/roboto"
+        android:paddingHorizontal="40dp"
+        android:text="News Source"
+        android:textAllCaps="false"
+        android:textColor="#EF6C00"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

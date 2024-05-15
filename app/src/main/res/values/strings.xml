@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Appcent News</string>
+    <string name="added_to_favorites">Article added to favorites</string>
+    <string name="removed_from_favorites">Article removed from favorites</string>
+    <string name="favorites">Favorites</string>
+    <string name="appcent">Appcent</string>
+    <string name="news">News</string>
+
+</resources>
