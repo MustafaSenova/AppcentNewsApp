@@ -25,6 +25,8 @@ Stay informed with the latest news from around the world! This application provi
 * **Retrofit and LiveData**
 * **RecyclerView**
 * **WebView**
+* **Picasso**
+
 
 
 ## Getting Started
